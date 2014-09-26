@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <!--<item name="android:actionBarStyle">@style/ActionBar</item>-->
+        <!--<item name="android:progressBarStyle">@style/ProgressBar.Horizontal</item>-->
+    </style>
+
+    <style name="ActionBar" parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:background">@android:color/holo_orange_light</item>
+    </style>
+
+    <style name="ProgressBar.Horizontal" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:minHeight">20dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
+    <style name="PagerTabStrip">
+        <item name="android:background">@android:color/holo_red_dark</item>
+    </style>
+
+</resources>

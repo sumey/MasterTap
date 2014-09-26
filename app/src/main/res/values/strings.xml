@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MasterTap</string>
+
+    <!-- Menu Items -->
+    <string name="action_rename">Edit label</string>
+    <string name="action_discard">Delete card</string>
+    <string name="action_secure">Lock</string>
+    <string name="action_change_password">Change password</string>
+    <string name="action_import">Import cards</string>
+    <string name="action_export">Export cards</string>
+
+    <!-- Dialog Buttons -->
+    <string name="ok">OK</string>
+    <string name="exit">Exit</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="enable">Enable</string>
+    <string name="delete">Delete</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="authenticate">Authenticate</string>
+    <string name="import_cards">Import</string>
+
+    <!-- APDU Service -->
+    <string name="service_description">MasterTap</string>
+    <string name="aid_description">MasterCard</string>
+    <string name="payment_progress_title">Processing payment…</string>
+
+    <!-- Disclaimer -->
+    <string name="disclaimer_title">Disclaimer</string>
+    <string name="warning">WARNING</string>
+    <string name="conditions">CONDITIONS</string>
+    <string name="disclaimer_checkbox">Show disclaimer next time.</string>
+    <string name="disclaimer_warning_1">1. The original card will probably not work for contactless transactions after it is cloned.</string>
+    <string name="disclaimer_warning_2">2. The cloned card will definitely not work if the original card is used for a contactless transaction after cloning.</string>
+    <string name="disclaimer_condition_1">1. This software is licenced under the MIT licence and shall be used at your own risk.</string>
+    <string name="disclaimer_condition_2">2. This software must only be used to clone your own cards where legally appropriate, and must not be used for illegal purposes.</string>
+    <string name="confirm_delete">Delete \"%1$s\"?</string>
+
+    <!-- Card Fragment -->
+    <string name="attempts_remaining">Transaction attempts remaining: %1$d</string>
+    <string name="cloning_progress">%1$.2f%% cloned</string>
+    <string name="no_nfc">NFC adapter absent on this device.</string>
+    <string name="nfc_disabled">NFC adapter is not enabled.</string>
+    <string name="prompt_label">Label your card…</string>
+    <string name="default_label">Untitled Card</string>
+    <string name="card_reading_progress_message">Pre-generating CVC3 values…</string>
+    <string name="card_transaction_progress_title">Transaction in Progress</string>
+    <string name="only_mastercard">Only MasterCards are supported.</string>
+    <string name="add_card">Add Card</string>
+    <string name="place_card">Place your PayPass® MasterCard® \n on a flat surface with the device on top. \n\n Cloning could take several minutes.</string>
+    <string name="valid_thru">VALID THRU LAST DAY OF</string>
+    <string name="card_read_progress_format" formatted="false">Generating CVC3 for UN %1d of %2d</string>
+    <string name="contact_lost">Lost contact with the card.</string>
+    <string name="contact_established">Established contact with a card.</string>
+
+    <!-- Database Authentication -->
+    <string name="register_password_title">Register a password…</string>
+    <string name="enter_password_title">Enter your password…</string>
+    <string name="change_password_title">Change your password…</string>
+    <string name="password">Password</string>
+    <string name="new_password">New Password</string>
+    <string name="current_password">Current Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="unmatched_passwords">Passwords do not match!</string>
+    <string name="blank_password">New password must not be blank!</string>
+    <string name="invalid_password">Invalid password entered!</string>
+    <string name="authenticated">Authenticated!</string>
+    <string name="password_changed">Password changed successfully!</string>
+
+    <!-- Import/Export -->
+    <string name="import_cards_title">Import cards…</string>
+    <string name="no_valid_cards_found">No valid cards found in file.</string>
+    <string name="select_cards_file">Select a JSON file with cards.</string>
+    <string name="import_io_error">Could not read external storage.</string>
+    <string name="export_io_error">Could not export cards to file.</string>
+    <string name="import_success">Import successful!</string>
+    <string name="export_success">Export successful!</string>
+
+</resources>

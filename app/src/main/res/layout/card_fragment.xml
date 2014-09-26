@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/card"
+                android:layout_width="280dp"
+                android:layout_height="160dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/card_border"
+                android:scaleType="centerCrop"
+                android:src="@drawable/card_background" />
+
+            <TextView
+                android:id="@+id/cardLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/card"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="Card Title"
+                android:textScaleX="1"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="25sp"
+                android:textStyle="bold|italic" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/cardPan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/card"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="5191 5456 6578 6543"
+                android:fontFamily="monospace"
+                android:textColor="@android:color/black"
+                android:textSize="19sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/card"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/cardExpiryDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/valid_thru"
+                    android:textColor="@android:color/black"
+                    android:textSize="6sp"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/cardExpiryDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="12/14"
+                    android:fontFamily="monospace"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" >
+                </TextView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cardType"
+                android:src="@drawable/mastercard"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/card"
+                android:layout_alignRight="@+id/card"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:scaleType="fitCenter" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/transactionsRemaining"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/attempts_remaining" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/cloningProgressLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_marginBottom="-5dp"
+            android:text="@string/cloning_progress" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/cloningProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:indeterminate="false"
+            android:clickable="false"
+            android:mirrorForRtl="false" />
+
+    </LinearLayout>
+
+</RelativeLayout>
