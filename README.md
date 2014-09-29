@@ -22,7 +22,7 @@ This is a PoC Android app that can effectively clone PayPass-enabled MasterCard 
 
 * SQLCipher key is not salted.
 * Only supports Android 4.4 (KitKat) and higher.
-* Has not been tested thoroughly and is not ready for daily usage.
+* Has not been tested thoroughly and is not ready for regular/stable usage.
 
 ## Licence
 
