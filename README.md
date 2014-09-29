@@ -9,6 +9,7 @@ This is a PoC Android app that can effectively clone PayPass-enabled MasterCard 
 
 * Store multiple cards and swipe to the desired card to select it for a contactless transaction.
 * Resume incomplete cloning.
+* Import/export cards in JSON format.
 * Lock/unlock application with a password.
 * Sensitive data is stored encrypted using SQLCipher.
 
