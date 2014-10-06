@@ -63,8 +63,10 @@ public class RegisterPasswordDialog extends DialogFragment {
                 String newPasswordConfirm = newPasswordConfirmInput.getText().toString();
 
                 if (!newPassword.equals(newPasswordConfirm)) {
+                    ctx.vibrator.vibrate(new long[] {0, 125, 125, 125}, -1);
                     ctx.toastMessage(ctx.getString(R.string.unmatched_passwords));
                 } else if (newPassword.isEmpty()) {
+                    ctx.vibrator.vibrate(new long[] {0, 125, 125, 125}, -1);
                     ctx.toastMessage(ctx.getString(R.string.blank_password));
                 } else {
                     MainActivity.cardDao.setNewKey(newPassword);

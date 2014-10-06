@@ -15,6 +15,7 @@ import android.nfc.cardemulation.CardEmulation;
 import android.nfc.tech.NfcA;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.LocalBroadcastManager;
@@ -70,6 +71,7 @@ public class MainActivity extends FragmentActivity {
     private int selectedPage = 0;
     private ProgressDialog paymentProgressDialog;
     private final Gson gson = new Gson();
+    public Vibrator vibrator;
 
     private NfcAdapter nfcAdapter;
     private final String[][] nfcTechFilter = new String[][] {new String[] {NfcA.class.getName()}};
@@ -82,6 +84,9 @@ public class MainActivity extends FragmentActivity {
 
         // Keep screen always on to prevent card reading interruptions.
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        // Obtain instance of system vibrator.
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         // Get NFC adapter and set intent.
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);

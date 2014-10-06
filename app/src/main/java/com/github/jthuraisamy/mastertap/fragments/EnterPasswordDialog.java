@@ -115,6 +115,7 @@ public class EnterPasswordDialog extends DialogFragment {
             ctx.toastMessage(ctx.getString(R.string.authenticated));
             dismiss();
         } catch (SQLiteException e) {
+            ctx.vibrator.vibrate(new long[] {0, 125, 125, 125}, -1);
             ctx.toastMessage(ctx.getString(R.string.invalid_password));
             passwordInput.setText("");
         }

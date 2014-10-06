@@ -3,6 +3,8 @@
     package="com.github.jthuraisamy.mastertap" >
 
     <uses-permission
+        android:name="android.permission.VIBRATE" />
+    <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission
         android:name="android.permission.NFC" />

@@ -70,6 +70,7 @@ public class ChangePasswordDialog extends DialogFragment {
                 try {
                     MainActivity.cardDao.setKey(password);
                 } catch (SQLiteException e) {
+                    ctx.vibrator.vibrate(new long[] {0, 125, 125, 125}, -1);
                     ctx.toastMessage(ctx.getString(R.string.invalid_password));
                     passwordInput.setText("");
                     return;
@@ -77,8 +78,10 @@ public class ChangePasswordDialog extends DialogFragment {
 
                 // Validate new password.
                 if (!newPassword.equals(newPasswordConfirm)) {
+                    ctx.vibrator.vibrate(new long[] {0, 125, 125, 125}, -1);
                     ctx.toastMessage(ctx.getString(R.string.unmatched_passwords));
                 } else if (newPassword.isEmpty()) {
+                    ctx.vibrator.vibrate(new long[] {0, 125, 125, 125}, -1);
                     ctx.toastMessage(ctx.getString(R.string.blank_password));
                 } else {
                     MainActivity.cardDao.setNewKey(newPassword);

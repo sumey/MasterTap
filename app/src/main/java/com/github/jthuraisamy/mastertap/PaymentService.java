@@ -1,9 +1,11 @@
 package com.github.jthuraisamy.mastertap;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.nfc.cardemulation.HostApduService;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
@@ -18,10 +20,15 @@ public class PaymentService extends HostApduService implements SharedPreferences
     private Card card;
     private String inboundApduDescription;
     private boolean transactionInProgress;
+    private Vibrator vibrator;
 
     @Override
     public void onCreate() {
         super.onCreate();
+
+        // Obtain instance of system vibrator.
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        vibrator.vibrate(250);
 
         // Register the OnSharedPreferenceChangeListener.
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -70,6 +77,7 @@ public class PaymentService extends HostApduService implements SharedPreferences
             if (hasUN && !isAttemptedUN) {
                 responseApdu = Helper.hexToByte(card.getCvc3Map().get(unpredictableNumber));
                 MainActivity.cardDao.attemptUN(card, unpredictableNumber);
+                vibrator.vibrate(500);
             } else {
                 responseApdu = ApduConstants.UNKNOWN_ERROR_RESPONSE;
             }
