@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 public interface CardDao {
-    public void addCard(Card card);
-    public void addCvc3(Card card, int unpredictableNumber, String response);
-    public List<Card> getCards();
-    public Card getCard(String pan);
-    public Map<Integer, String> getCvc3MapByCardId(int id);
-    public void updateCard(Card card);
-    public void deleteCard(Card card);
+    void addCard(Card card);
+    void addCvc3(Card card, int unpredictableNumber, String response);
+    List<Card> getCards();
+    Card getCard(String pan);
+    Map<Integer, String> getCvc3MapByCardId(int id);
+    void updateCard(Card card);
+    void deleteCard(Card card);
 }

@@ -46,7 +46,7 @@ public class Helper {
             decimalString.append(String.format("%02X", b));
         }
 
-        return Integer.valueOf(decimalString.toString());
+        return Integer.parseInt(decimalString.toString());
     }
 
     /**

@@ -73,9 +73,9 @@ public class PaymentService extends HostApduService implements SharedPreferences
             int unpredictableNumber = getUN(commandApdu);
             boolean hasUN = card.hasUN(unpredictableNumber);
             boolean isAttemptedUN = card.getAttemptedUNs().contains(unpredictableNumber);
-            Log.i(TAG, "UN: " + String.valueOf(unpredictableNumber));
+            Log.i(TAG, "UN: " + unpredictableNumber);
 
-            // Return CVC3 values if there is an unattempted response for the given UN.
+            // Return CVC3 values if there is an unattended response for the given UN.
             if (hasUN && !isAttemptedUN) {
                 responseApdu = Helper.hexToByte(card.getCvc3Map().get(unpredictableNumber));
                 MainActivity.cardDao.attemptUN(card, unpredictableNumber);

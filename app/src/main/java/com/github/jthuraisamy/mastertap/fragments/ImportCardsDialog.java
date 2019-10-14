@@ -45,9 +45,8 @@ public class ImportCardsDialog extends DialogFragment {
         // Select all cards by default.
         boolean[] checkedItems = new boolean[cards.size()];
         Arrays.fill(checkedItems, true);
-        selectedCards = new ArrayList<Card>();
-        for (Card card : cards)
-            selectedCards.add(card);
+        selectedCards = new ArrayList<>();
+        selectedCards.addAll(cards);
 
         // Set title bar.
         alertDialog.setTitle(R.string.import_cards_title);

@@ -31,7 +31,7 @@ public class CardReaderTask extends AsyncTask<Tag, Integer, String> {
     private IsoDep tagCommunicator;
 
     private Card card;
-    Map<Integer, String> cvc3Map = new HashMap<Integer, String>();
+    Map<Integer, String> cvc3Map = new HashMap<>();
 
     private int taskStatus = 0;
     private final int STATUS_INVALID_AID = 1;
@@ -121,7 +121,7 @@ public class CardReaderTask extends AsyncTask<Tag, Integer, String> {
             } else if (gpoResponse[0] == (byte) 0x80) {
                 gpoResponse[3] |= 0x80;
             }
-            Log.i(TAG, "Modfied GPO Response = " + Helper.byteToHex(gpoResponse));
+            Log.i(TAG, "Modified GPO Response = " + Helper.byteToHex(gpoResponse));
 
             // Retrieve records from Application File Locator (AFL) in GPO response.
             byte[] afl = new byte[] {};

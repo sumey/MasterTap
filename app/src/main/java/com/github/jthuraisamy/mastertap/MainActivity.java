@@ -374,7 +374,7 @@ public class MainActivity extends FragmentActivity {
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor settingsEditor = settings.edit();
         settingsEditor.putInt("paymentCardIndex", cardIndex);
-        settingsEditor.commit();
+        settingsEditor.apply();
     }
 
     /**

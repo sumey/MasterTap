@@ -110,9 +110,7 @@ public class SQLiteCardDao extends SQLiteOpenHelper implements CardDao {
 
     public boolean isOpen() {
         if ((dbReadable != null) && (dbWritable != null)) {
-            if (dbReadable.isOpen() && dbWritable.isOpen()) {
-                return true;
-            }
+            return dbReadable.isOpen() && dbWritable.isOpen();
         }
 
         return false;
@@ -219,7 +217,7 @@ public class SQLiteCardDao extends SQLiteOpenHelper implements CardDao {
     }
 
     public List<Card> getCards() {
-        List<Card> cards = new ArrayList<Card>();
+        List<Card> cards = new ArrayList<>();
 
         // Put an empty card at index 0 for the AddCardFragment.
         cards.add(0, new Card(ctx));
@@ -268,7 +266,7 @@ public class SQLiteCardDao extends SQLiteOpenHelper implements CardDao {
 
         if (cursor != null && cursor.moveToFirst()) {
             card = new Card(ctx);
-            card.setId(Integer.valueOf(cursor.getString(0)));
+            card.setId(Integer.parseInt(cursor.getString(0)));
             card.setLabel(cursor.getString(1));
             card.setPan(cursor.getString(2));
             card.setExpiryDate(cursor.getString(3));
@@ -277,7 +275,7 @@ public class SQLiteCardDao extends SQLiteOpenHelper implements CardDao {
             card.setMagStripeData(cursor.getString(6));
             card.setCvc3Map(getCvc3MapByCardId(card.getId()));
             card.setAttemptedUNs(getAttemptedUNsByCardId(card.getId()));
-            Log.i(TAG, "CVC3 Map Size: " + String.valueOf(card.getCvc3Map().size()) + " for id = " + String.valueOf(card.getId()));
+            Log.i(TAG, "CVC3 Map Size: " + card.getCvc3Map().size() + " for id = " + card.getId());
         } else {
             card = null;
         }
@@ -289,7 +287,7 @@ public class SQLiteCardDao extends SQLiteOpenHelper implements CardDao {
     public Map<Integer, String> getCvc3MapByCardId(int id) {
         if (!isOpen()) open();
 
-        Map<Integer, String> cvc3Map = new HashMap<Integer, String>();
+        Map<Integer, String> cvc3Map = new HashMap<>();
 
         String selectQuery = String.format(
                 "SELECT %s, %s FROM %s WHERE %s = %d",
@@ -311,7 +309,7 @@ public class SQLiteCardDao extends SQLiteOpenHelper implements CardDao {
     public ArrayList<Integer> getAttemptedUNsByCardId(int id) {
         if (!isOpen()) open();
 
-        ArrayList<Integer> attemptedUNs = new ArrayList<Integer>();
+        ArrayList<Integer> attemptedUNs = new ArrayList<>();
 
         String selectQuery = String.format(
                 "SELECT %s FROM %s WHERE %s = %d AND %s = 1",

@@ -19,8 +19,8 @@ public class Card {
     private String paymentDirectory;
     private String aidFci;
     private String magStripeData = "";
-    private Map<Integer, String> cvc3Map = new HashMap<Integer, String>();
-    private ArrayList<Integer> attemptedUNs = new ArrayList<Integer>();
+    private Map<Integer, String> cvc3Map = new HashMap<>();
+    private ArrayList<Integer> attemptedUNs = new ArrayList<>();
 
     public Card() {}
 
