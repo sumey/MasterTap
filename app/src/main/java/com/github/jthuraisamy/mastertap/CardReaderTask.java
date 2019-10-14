@@ -22,7 +22,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class CardReaderTask extends AsyncTask<Tag, Integer, String> {
     private static final String TAG = "MasterTapLog-" + CardReaderTask.class.getSimpleName();
 

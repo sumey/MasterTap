@@ -1,29 +1,30 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion '20.0.0'
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
 
     defaultConfig {
         applicationId "com.github.jthuraisamy.mastertap"
-        minSdkVersion 19
-        targetSdkVersion 20
+        minSdkVersion 23
+        targetSdkVersion 29
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.1"
     }
 
     buildTypes {
         release {
-            runProguard false
+//            runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:support-v4:20.0.0'
-    compile 'com.google.code.gson:gson:2.2.4'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
 
 }
 

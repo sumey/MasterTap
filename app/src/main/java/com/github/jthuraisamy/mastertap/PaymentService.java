@@ -7,8 +7,10 @@ import android.nfc.cardemulation.HostApduService;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
-import android.support.v4.content.LocalBroadcastManager;
+
 import android.util.Log;
+
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.github.jthuraisamy.mastertap.models.Card;
 
