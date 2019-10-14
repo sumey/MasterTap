@@ -2,6 +2,8 @@ package com.github.jthuraisamy.mastertap.models;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+
 import com.github.jthuraisamy.mastertap.Helper;
 import com.github.jthuraisamy.mastertap.R;
 import com.github.jthuraisamy.mastertap.TLVParser;
@@ -156,6 +158,7 @@ public class Card {
     }
 
     @Override
+    @NonNull
     public String toString() {
         return String.format(
             "Card [\n\t" +

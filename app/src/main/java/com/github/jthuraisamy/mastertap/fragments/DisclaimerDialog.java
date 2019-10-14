@@ -1,6 +1,5 @@
 package com.github.jthuraisamy.mastertap.fragments;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -11,6 +10,7 @@ import android.view.View;
 import android.widget.CheckBox;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.github.jthuraisamy.mastertap.MainActivity;
@@ -80,7 +80,7 @@ public class DisclaimerDialog extends DialogFragment {
     public void onResume() {
         super.onResume();
 
-        final AlertDialog alertDialog = (AlertDialog) getDialog();
+        final androidx.appcompat.app.AlertDialog alertDialog = (androidx.appcompat.app.AlertDialog) getDialog();
 
         // Set OnCancelListener.
         alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {

@@ -1,6 +1,5 @@
 package com.github.jthuraisamy.mastertap.fragments;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -10,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.github.jthuraisamy.mastertap.MainActivity;
@@ -31,7 +31,7 @@ public class RenameCardDialog extends DialogFragment {
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final MainActivity ctx = (MainActivity) getActivity();
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx);
+        AlertDialog.Builder alertDialog = new androidx.appcompat.app.AlertDialog.Builder(ctx);
 
         // Set title bar.
         alertDialog.setIcon(R.drawable.ic_action_new_label);

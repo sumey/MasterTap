@@ -1,12 +1,13 @@
 package com.github.jthuraisamy.mastertap;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.nfc.Tag;
 import android.nfc.tech.IsoDep;
 import android.os.AsyncTask;
 import android.util.Log;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.github.jthuraisamy.mastertap.fragments.RenameCardDialog;
 import com.github.jthuraisamy.mastertap.helpers.MastercardHelper;
@@ -227,7 +228,7 @@ public class CardReaderTask extends AsyncTask<Tag, Integer, String> {
                 break;
             // If the card is not a valid MasterCard credit card.
             case STATUS_INVALID_AID:
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx);
+                AlertDialog.Builder alertDialog = new androidx.appcompat.app.AlertDialog.Builder(ctx);
                 alertDialog.setMessage(ctx.getText(R.string.only_mastercard));
                 alertDialog.setNeutralButton(R.string.ok, null);
                 alertDialog.create();

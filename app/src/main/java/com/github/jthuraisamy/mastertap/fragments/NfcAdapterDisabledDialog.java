@@ -1,6 +1,5 @@
 package com.github.jthuraisamy.mastertap.fragments;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,6 +7,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.github.jthuraisamy.mastertap.MainActivity;
@@ -25,7 +25,7 @@ public class NfcAdapterDisabledDialog extends DialogFragment {
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final MainActivity ctx = (MainActivity) getActivity();
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx);
+        AlertDialog.Builder alertDialog = new androidx.appcompat.app.AlertDialog.Builder(ctx);
 
         alertDialog.setMessage(getText(R.string.nfc_disabled));
 

@@ -1,6 +1,5 @@
 package com.github.jthuraisamy.mastertap.fragments;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -13,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.github.jthuraisamy.mastertap.MainActivity;
@@ -32,7 +32,7 @@ public class EnterPasswordDialog extends DialogFragment {
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final MainActivity ctx = (MainActivity) getActivity();
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx);
+        androidx.appcompat.app.AlertDialog.Builder alertDialog = new androidx.appcompat.app.AlertDialog.Builder(ctx);
 
         // Set title bar.
         alertDialog.setTitle(R.string.enter_password_title);
@@ -95,7 +95,7 @@ public class EnterPasswordDialog extends DialogFragment {
         });
     }
 
-    private void submitPassword(AlertDialog alertDialog) {
+    private void submitPassword(androidx.appcompat.app.AlertDialog alertDialog) {
         final MainActivity ctx = (MainActivity) getActivity();
         EditText passwordInput = (EditText) alertDialog.findViewById(R.id.passwordInput);
         String password = passwordInput.getText().toString();

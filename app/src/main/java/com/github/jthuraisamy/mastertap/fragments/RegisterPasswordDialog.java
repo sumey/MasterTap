@@ -1,6 +1,5 @@
 package com.github.jthuraisamy.mastertap.fragments;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -10,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.github.jthuraisamy.mastertap.MainActivity;
@@ -27,7 +27,7 @@ public class RegisterPasswordDialog extends DialogFragment {
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final MainActivity ctx = (MainActivity) getActivity();
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx);
+        AlertDialog.Builder alertDialog = new androidx.appcompat.app.AlertDialog.Builder(ctx);
 
         // Set title bar.
         alertDialog.setTitle(R.string.register_password_title);
@@ -50,7 +50,7 @@ public class RegisterPasswordDialog extends DialogFragment {
     public void onResume() {
         super.onResume();
 
-        final AlertDialog alertDialog = (AlertDialog) getDialog();
+        final androidx.appcompat.app.AlertDialog alertDialog = (androidx.appcompat.app.AlertDialog) getDialog();
         Button saveButton = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
 
         saveButton.setOnClickListener(new View.OnClickListener() {

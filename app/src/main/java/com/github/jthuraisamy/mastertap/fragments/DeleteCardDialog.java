@@ -1,11 +1,11 @@
 package com.github.jthuraisamy.mastertap.fragments;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.github.jthuraisamy.mastertap.MainActivity;
@@ -27,7 +27,7 @@ public class DeleteCardDialog extends DialogFragment {
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final MainActivity ctx = (MainActivity) getActivity();
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx);
+        AlertDialog.Builder alertDialog = new androidx.appcompat.app.AlertDialog.Builder(ctx);
 
         alertDialog.setMessage(String.format(getString(R.string.confirm_delete), card.getLabel()));
         alertDialog.setNegativeButton(R.string.cancel, null);

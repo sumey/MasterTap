@@ -18,14 +18,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
-
+    implementation 'com.android.support:appcompat-v7'
+    // Community Edition
+    implementation 'net.zetetic:android-database-sqlcipher:4.2.0@aar'
+    //Commercial Editoion in libs
 }
 
 buildscript {
