@@ -1,12 +1,13 @@
 package com.github.jthuraisamy.mastertap.fragments;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
 
 import com.github.jthuraisamy.mastertap.Helper;
 import com.github.jthuraisamy.mastertap.MainActivity;
@@ -33,7 +34,7 @@ public class ImportCardsDialog extends DialogFragment {
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final MainActivity ctx = (MainActivity) getActivity();
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx);
+        androidx.appcompat.app.AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx);
 
         // Populate selection items.
         CharSequence[] cardChoiceItems = new CharSequence[cards.size()];
@@ -44,9 +45,8 @@ public class ImportCardsDialog extends DialogFragment {
         // Select all cards by default.
         boolean[] checkedItems = new boolean[cards.size()];
         Arrays.fill(checkedItems, true);
-        selectedCards = new ArrayList<Card>();
-        for (Card card : cards)
-            selectedCards.add(card);
+        selectedCards = new ArrayList<>();
+        selectedCards.addAll(cards);
 
         // Set title bar.
         alertDialog.setTitle(R.string.import_cards_title);

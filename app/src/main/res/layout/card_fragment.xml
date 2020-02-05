@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
@@ -26,7 +27,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/card_border"
                 android:scaleType="centerCrop"
-                android:src="@drawable/card_background" />
+                app:srcCompat="@drawable/card_background" />
 
             <TextView
                 android:id="@+id/cardLabel"
@@ -34,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/card"
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
                 android:text="Card Title"
                 android:textScaleX="1"
@@ -49,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/card"
                 android:layout_marginTop="80dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
                 android:text="5191 5456 6578 6543"
                 android:fontFamily="monospace"
@@ -62,7 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/card"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="15dp"
                 android:orientation="vertical" >
 
@@ -71,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="left|center_vertical"
+                    android:gravity="start|center_vertical"
                     android:text="@string/valid_thru"
                     android:textColor="@android:color/black"
                     android:textSize="6sp"
@@ -82,8 +83,8 @@
                     android:id="@+id/cardExpiryDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:gravity="left"
+                    android:layout_gravity="start"
+                    android:gravity="start"
                     android:text="12/14"
                     android:fontFamily="monospace"
                     android:textColor="@android:color/black"
@@ -95,12 +96,12 @@
 
             <ImageView
                 android:id="@+id/cardType"
-                android:src="@drawable/mastercard"
+                app:srcCompat="@drawable/mastercard"
                 android:layout_width="70dp"
                 android:layout_height="30dp"
                 android:layout_alignBottom="@+id/card"
-                android:layout_alignRight="@+id/card"
-                android:layout_marginRight="10dp"
+                android:layout_alignEnd="@+id/card"
+                android:layout_marginEnd="10dp"
                 android:layout_marginBottom="15dp"
                 android:scaleType="fitCenter" />
 

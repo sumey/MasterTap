@@ -2,6 +2,8 @@ package com.github.jthuraisamy.mastertap.models;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+
 import com.github.jthuraisamy.mastertap.Helper;
 import com.github.jthuraisamy.mastertap.R;
 import com.github.jthuraisamy.mastertap.TLVParser;
@@ -19,8 +21,8 @@ public class Card {
     private String paymentDirectory;
     private String aidFci;
     private String magStripeData = "";
-    private Map<Integer, String> cvc3Map = new HashMap<Integer, String>();
-    private ArrayList<Integer> attemptedUNs = new ArrayList<Integer>();
+    private Map<Integer, String> cvc3Map = new HashMap<>();
+    private ArrayList<Integer> attemptedUNs = new ArrayList<>();
 
     public Card() {}
 
@@ -156,6 +158,7 @@ public class Card {
     }
 
     @Override
+    @NonNull
     public String toString() {
         return String.format(
             "Card [\n\t" +

@@ -37,7 +37,7 @@ public class PortHelper {
      * @return validCards
      */
     public static List<Card> validateCards(Card[] cards) {
-        List<Card> validCards = new ArrayList<Card>();
+        List<Card> validCards = new ArrayList<>();
 
         for (Card card : cards) {
             if (validateCard(card))

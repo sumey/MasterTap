@@ -68,7 +68,7 @@ public class VisaHelper {
         // The AFL must be a multiple of 4 bytes.
         if ((afl.length & 0x03) > 0) return null;
 
-        List<CardRecord> cardRecords = new ArrayList<CardRecord>();
+        List<CardRecord> cardRecords = new ArrayList<>();
 
         // Get the number of files.
         int numFiles = afl.length / 4;

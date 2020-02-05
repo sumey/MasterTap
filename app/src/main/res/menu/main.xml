@@ -1,34 +1,35 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity" >
 
     <item android:id="@+id/action_rename"
         android:icon="@drawable/ic_action_edit"
         android:title="@string/action_rename"
-        android:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom" />
 
     <item android:id="@+id/action_delete"
         android:icon="@drawable/ic_action_discard"
         android:title="@string/action_discard"
-        android:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom" />
 
     <item android:id="@+id/action_lock"
         android:icon="@drawable/ic_action_secure"
         android:title="@string/action_secure"
-        android:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom" />
 
     <item android:id="@+id/action_change_password"
         android:title="@string/action_change_password"
-        android:showAsAction="never" />
+        app:showAsAction="never" />
 
     <item android:id="@+id/action_import"
         android:icon="@drawable/ic_action_download"
         android:title="@string/action_import"
-        android:showAsAction="never" />
+        app:showAsAction="never" />
 
     <item android:id="@+id/action_export"
         android:icon="@drawable/ic_action_upload"
         android:title="@string/action_export"
-        android:showAsAction="never" />
+        app:showAsAction="never" />
 
 </menu>
